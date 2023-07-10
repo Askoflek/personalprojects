@@ -1,0 +1,39 @@
+/* colors */
+:root {
+  --color-primary: #1f3251;
+  --color-secondary: #d6e2f0;
+  --color-text: #7b879d;
+  --color-shadow: rgba(0, 0, 0, 0.25);
+  --color-background: white;
+}
+
+
+/* font styles */
+.heading-1 {
+  font-family: "Outfit", sans-serif;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: calc(22rem / 16);
+  font-style: normal;
+  line-height: calc(28rem / 16);
+  text-align: center;
+}
+
+.body-text {
+  font-family: "Outfit", sans-serif;
+  color: var(--color-text);
+  font-weight: 400;
+  font-size: calc(15rem / 16);
+  line-height: calc(19rem / 16);
+  font-style: normal;
+  text-align: center;
+}
+
+.footer-text {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  font-size: calc(11rem / 16);
+  line-height: calc(14rem / 16);
+  color: var(--color-primary);
+  font-style: normal;
+}
