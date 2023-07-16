@@ -1,0 +1,22 @@
+@forward "../abstracts/colors";
+@forward "../abstracts/fonts";
+@forward "../abstracts/functions";
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  width: 400px;
+}
+
+.toggle-mode-wrapper {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
