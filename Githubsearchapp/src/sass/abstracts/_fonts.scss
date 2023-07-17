@@ -1,0 +1,101 @@
+@use "./colors" as *;
+@use "./functions" as f;
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+.heading-1 {
+  font-family:
+    Space Mono,
+    sans-serif;
+  font-size: f.pxToRem(26);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: $app-name-text;
+}
+
+.follower-amount {
+  font-family:
+    Space Mono,
+    sans-serif;
+  font-size: f.pxToRem(22);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: $primary-text;
+}
+
+.github-username {
+  color: $search-button;
+  font-family:
+    Space Mono,
+    sans-serif;
+  font-size: f.pxToRem(16);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.follower-category {
+  color: $secondary-text;
+  font-family:
+    Space Mono,
+    sans-serif;
+  font-size: f.pxToRem(13);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.primary-text {
+  color: $primary-text;
+  font-family:
+    Space Mono,
+    sans-serif;
+  font-size: f.pxToRem(15);
+  font-style: normal;
+  font-weight: 400;
+  line-height: f.pxToRem(25);
+}
+
+.social-text {
+  color: $secondary-text;
+  font-family:
+    Space Mono,
+    sans-serif;
+  font-size: f.pxToRem(15);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.not-available {
+  color: $unavailable-social;
+}
+
+.toggle-mode-text {
+  color: $unavailable-social;
+  font-family:
+    Space Mono,
+    sans-serif;
+  font-size: pxToRem(13);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: pxToRem(2.5);
+  text-transform: uppercase;
+}
+
+.primary-search-text {
+  font-size: f.pxToRem(18);
+}
+
+.search-button {
+  color: $button-text;
+  font-family:
+    Space Mono,
+    sans-serif;
+  font-size: f.pxToRem(16);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

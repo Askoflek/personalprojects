@@ -1,1 +1,87 @@
 @use "./abstracts/index" as *;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 730px;
+  margin: 30px auto;
+  background-color: $light-body-background;
+}
+
+.header-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.toggle-mode-wrapper {
+  display: flex;
+  gap: 16px;
+}
+
+form {
+  width: 100%;
+  background-color: $component-background;
+  border-radius: 15px;
+  margin-top: 36px;
+  margin-bottom: 16px;
+}
+
+.search-user {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.img-input-wrapper {
+  width: 100%;
+  padding: 22px 0 22px 32px;
+  gap: 24px;
+  display: flex;
+  input {
+    flex-grow: 1;
+    border: none;
+    caret-color: $search-button;
+  }
+  input:focus {
+    outline: none;
+  }
+}
+
+.search-button {
+  background-color: $search-button;
+  border-radius: 10px;
+  color: $button-text;
+  border-color: transparent;
+  flex-grow: 1;
+  margin: 9.5px 10px 9.5px 24px;
+  min-width: 106px;
+  height: 50px;
+}
+
+.user-profile {
+  background-color: $component-background;
+  width: 100%;
+  padding: 48px;
+  display: flex;
+  gap: 37px;
+}
+
+.user-image > img {
+  border-radius: 50%;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.full-name {
+  color: $primary-text;
+}
+
+.not-available > g > path {
+  fill: $unavailable-social;
+}
