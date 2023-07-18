@@ -5,7 +5,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 730px;
+  max-width: 730px;
   margin: 30px auto;
   background-color: $light-body-background;
 }
@@ -32,6 +32,11 @@ form {
   width: 100%;
   display: flex;
   align-items: center;
+  box-shadow: 0px 16px 30px -10px $box-shadow;
+}
+
+.primary-search-text::placeholder {
+  color: $secondary-text;
 }
 
 .img-input-wrapper {
@@ -66,6 +71,8 @@ form {
   padding: 48px;
   display: flex;
   gap: 37px;
+  border-radius: 15px;
+  box-shadow: 0px 16px 30px -10px $box-shadow;
 }
 
 .user-image > img {
@@ -78,8 +85,60 @@ form {
   justify-content: center;
 }
 
+.user-name-joined-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .full-name {
   color: $primary-text;
+}
+
+.date-joined {
+  line-height: normal;
+  margin-left: auto;
+}
+
+.follower-wrapper {
+  display: flex;
+  background-color: $light-body-background;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 37px;
+  margin-top: 32px;
+}
+
+.follower-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 83px 17px 32px;
+  li {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.socials-wrapper {
+  display: flex;
+  gap: 60px;
+}
+
+.socials-left {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.socials-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social {
+  display: flex;
+  gap: 15px;
 }
 
 .not-available > g > path {
