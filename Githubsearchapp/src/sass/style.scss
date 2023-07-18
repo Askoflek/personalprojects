@@ -6,7 +6,8 @@ body {
   align-items: center;
   flex-direction: column;
   max-width: 730px;
-  margin: 30px auto;
+  margin: auto;
+  padding: 25px;
   background-color: $light-body-background;
 }
 
@@ -18,6 +19,16 @@ body {
 .toggle-mode-wrapper {
   display: flex;
   gap: 16px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.error {
+  display: none;
+  color: $color-text-error;
+  flex-shrink: 0;
+  font-weight: 700;
 }
 
 form {
@@ -63,6 +74,10 @@ form {
   margin: 9.5px 10px 9.5px 24px;
   min-width: 106px;
   height: 50px;
+  &:hover {
+    cursor: pointer;
+    background-color: $search-button-hover;
+  }
 }
 
 .user-profile {
@@ -70,6 +85,7 @@ form {
   width: 100%;
   padding: 48px;
   display: flex;
+  flex-direction: column;
   gap: 37px;
   border-radius: 15px;
   box-shadow: 0px 16px 30px -10px $box-shadow;
@@ -77,6 +93,10 @@ form {
 
 .user-image > img {
   border-radius: 50%;
+}
+
+.hero-wrapper {
+  display: flex;
 }
 
 .user-info {
@@ -121,6 +141,7 @@ form {
 
 .socials-wrapper {
   display: flex;
+  flex-wrap: wrap;
   gap: 60px;
 }
 
@@ -139,6 +160,14 @@ form {
 .social {
   display: flex;
   gap: 15px;
+  a {
+    text-decoration: none;
+  }
+  &:hover {
+    a {
+      text-decoration: underline;
+    }
+  }
 }
 
 .not-available > g > path {
