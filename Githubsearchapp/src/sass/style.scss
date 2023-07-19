@@ -97,6 +97,7 @@ form {
 
 .hero-wrapper {
   display: flex;
+  gap: 19px;
 }
 
 .user-info {
@@ -106,6 +107,11 @@ form {
 }
 
 .user-name-joined-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.primary-text {
   display: flex;
   flex-wrap: wrap;
 }
@@ -117,6 +123,7 @@ form {
 .date-joined {
   line-height: normal;
   margin-left: auto;
+  flex-wrap: wrap;
 }
 
 .follower-wrapper {
