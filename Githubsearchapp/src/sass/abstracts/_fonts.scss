@@ -99,3 +99,33 @@
   font-weight: 700;
   line-height: normal;
 }
+
+@media (max-width: 480px) {
+  .github-username {
+    font-size: f.pxToRem(13);
+  }
+  .date-joined {
+    font-size: f.pxToRem(13);
+  }
+  .primary-text {
+    font-size: f.pxToRem(13);
+  }
+  .follower-category {
+    font-size: f.pxToRem(11);
+  }
+  .follower-amount {
+    font-size: f.pxToRem(16);
+  }
+  .social-text {
+    font-size: f.pxToRem(13);
+  }
+  .full-name {
+    font-size: f.pxToRem(16);
+  }
+  .primary-search-text {
+    font-size: f.pxToRem(13);
+  }
+  .search-button {
+    font-size: f.pxToRem(14);
+  }
+}
