@@ -9,12 +9,13 @@ const repos = document.getElementById("user-repos");
 const followers = document.getElementById("followers");
 const following = document.getElementById("following");
 const location = document.getElementById("location");
-const website = document.getElementById("website");
+const blog = document.getElementById("blog");
 const twitter = document.getElementById("twitter");
 const company = document.getElementById("company");
 const errorMessage = document.getElementById("error");
 const userProfile = document.getElementById("user-profile");
-const toggleButton = document.getElementById("toggle-button");
+const lightButton = document.getElementById("light-button");
+const darkButton = document.getElementById("dark-button");
 
 new githubDOM({
   userPhoto,
@@ -26,9 +27,11 @@ new githubDOM({
   followers,
   following,
   location,
-  website,
+  blog,
   twitter,
   company,
   errorMessage,
   userProfile,
+  lightButton,
+  darkButton,
 });

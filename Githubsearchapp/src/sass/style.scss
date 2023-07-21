@@ -37,6 +37,26 @@ body {
     }
   }
 }
+.light-button {
+  display: none;
+  gap: 16px;
+  .toggle-mode-text-light {
+    color: var(--button-text);
+  }
+  &:hover {
+    cursor: pointer;
+    .toggle-mode-text-light {
+      color: var(--button-light);
+    }
+    svg {
+      g {
+        path {
+          fill: var(--button-light);
+        }
+      }
+    }
+  }
+}
 
 form {
   width: 100%;
@@ -52,6 +72,7 @@ form {
   align-items: center;
   gap: 24px;
   padding: 9.5px 10px 9.5px 32px;
+  border-radius: 15px;
   .primary-search-text {
     flex-grow: 1;
   }
@@ -194,8 +215,16 @@ form {
   grid-template-rows: 1fr 1fr;
   row-gap: 19px;
   column-gap: 40px;
+  li {
+    svg {
+      path {
+        fill: var(--secondary-text);
+      }
+    }
+  }
 
   .social-1 {
+    gap: 19px;
     order: 1;
   }
   .social-2 {
@@ -220,6 +249,22 @@ form {
     a {
       text-decoration: underline;
     }
+  }
+}
+.unavailable {
+  a {
+    color: var(--unavailable-social);
+  }
+  color: var(--unavailable-social);
+  svg {
+    g {
+      path {
+        fill: var(--unavailable-social);
+      }
+    }
+  }
+  span {
+    color: var(--unavailable-social);
   }
 }
 
@@ -329,6 +374,12 @@ form {
 }
 
 @media (prefers-color-scheme: dark) {
+  .light-button {
+    display: flex;
+  }
+  #dark-button {
+    display: none;
+  }
   :root {
     --body-background: #141d2f;
     --search-button: #0079ff;
@@ -342,8 +393,9 @@ form {
     --box-shadow: 0;
     --color-text-error: #f74646;
     --search-button-hover: #60abff;
+    --button-light: #90a4d4;
   }
-  .dark-mode {
+  .light-mode {
     --body-background: #f6f8ff;
     --search-button: #0079ff;
     --primary-text: #2b3442;

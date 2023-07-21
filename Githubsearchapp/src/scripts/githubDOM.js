@@ -8,28 +8,22 @@ export class githubDOM {
     this.currentUser = new currentUser();
     const form = document.getElementById("form");
     form.addEventListener("submit", this.handleSubmit.bind(this));
-    const toggleButton = document.getElementById("toggle-button");
-    toggleButton.addEventListener("click", this.toggleDarkMode.bind(this));
-    let darkMode = localStorage.getItem("darkMode");
-    localStorage.setItem("darkMode", "disabled");
+    const darkToggle = document.getElementById("dark-button");
+    const lightToggle = document.getElementById("light-button");
+    darkToggle.addEventListener("click", this.enableDarkMode.bind(this));
+    lightToggle.addEventListener("click", this.disableDarkMode.bind(this));
   }
   enableDarkMode() {
+    document.body.classList.remove("light-mode");
     document.body.classList.add("dark-mode");
-    localStorage.setItem("darkMode", "enabled");
+    this.elements.darkButton.style.display = "none";
+    this.elements.lightButton.style.display = "flex";
   }
-
   disableDarkMode() {
     document.body.classList.remove("dark-mode");
-    localStorage.setItem("darkMode", "disabled");
-  }
-
-  toggleDarkMode() {
-    this.darkMode = localStorage.getItem("darkMode");
-    if (this.darkMode !== "enabled") {
-      this.enableDarkMode();
-    } else {
-      this.disableDarkMode();
-    }
+    document.body.classList.add("light-mode");
+    this.elements.darkButton.style.display = "flex";
+    this.elements.lightButton.style.display = "none";
   }
 
   handleSubmit(e) {
@@ -44,10 +38,12 @@ export class githubDOM {
       this.renderData(data);
     } catch (error) {
       this.renderError();
+      console.error(error);
     }
   }
 
   renderData(data) {
+    console.log(data);
     this.renderUserProfile();
     this.elements.userPhoto.src = data.avatar_url;
     this.elements.fullName.textContent = data.name;
@@ -57,13 +53,11 @@ export class githubDOM {
     this.elements.repos.textContent = data.public_repos;
     this.elements.followers.textContent = data.followers;
     this.elements.following.textContent = data.following;
-    this.elements.location.textContent = data.location ? data.location : "Not available";
-    this.elements.website.href = data.blog ? data.blog : "Not available";
-    this.elements.website.textContent = data.blog;
-    this.elements.twitter.textContent = data.twitter_username
-      ? data.twitter_username
-      : "Not available";
-    this.elements.company.textContent = data.company ? data.company : "Not available";
+    this.renderLocation(data);
+    this.renderBlog(data);
+    this.renderTwitter(data);
+    this.renderCompany(data);
+    console.log("success");
   }
 
   renderDate(date) {
@@ -84,5 +78,44 @@ export class githubDOM {
   }
   renderUserProfile() {
     this.elements.userProfile.style.display = "flex";
+  }
+
+  renderLocation(data) {
+    const text = this.elements.location.querySelector("span");
+    text.textContent = data.location ? data.location : "Not available";
+    if (!data.location) {
+      this.elements.location.classList.add("unavailable");
+    } else {
+      this.elements.location.classList.remove("unavailable");
+    }
+  }
+  renderBlog(data) {
+    const link = this.elements.blog.querySelector("a");
+    link.href = data.blog;
+    link.textContent = data.blog;
+    if (!data.blog) {
+      this.elements.blog.classList.add("unavailable");
+      link.textContent = "Not available";
+    } else {
+      this.elements.blog.classList.remove("unavailable");
+    }
+  }
+  renderTwitter(data) {
+    const text = this.elements.twitter.querySelector("span");
+    text.textContent = data.twitter ? data.twitter : "Not available";
+    if (data.twitter == null) {
+      this.elements.twitter.classList.add("unavailable");
+    } else {
+      this.elements.twitter.classList.remove("unavailable");
+    }
+  }
+  renderCompany(data) {
+    const text = this.elements.company.querySelector("span");
+    text.textContent = data.company ? data.company : "Not available";
+    if (!data.company) {
+      this.elements.company.classList.add("unavailable");
+    } else {
+      this.elements.company.classList.remove("unavailable");
+    }
   }
 }

@@ -84,6 +84,18 @@
   letter-spacing: pxToRem(2.5);
   text-transform: uppercase;
 }
+.toggle-mode-text-light {
+  color: var(--button-text);
+  font-family:
+    Space Mono,
+    sans-serif;
+  font-size: pxToRem(13);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: pxToRem(2.5);
+  text-transform: uppercase;
+}
 
 .primary-search-text {
   font-size: f.pxToRem(18);
