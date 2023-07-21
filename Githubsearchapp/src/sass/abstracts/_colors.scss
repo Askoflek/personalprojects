@@ -1,3 +1,32 @@
+:root {
+  --body-background: #f6f8ff;
+  --search-button: #0079ff;
+  --primary-text: #2b3442;
+  --secondary-text: #4b6a9b;
+  --component-background: #fefefe;
+  --unavailable-social: #697c9a;
+  --button-text: #fff;
+  --app-name-text: #222731;
+  --box-shadow: rgba(70, 96, 187, 0.2);
+  --color-text-error: #f74646;
+  --search-button-hover: #60abff;
+}
+
+.dark-mode {
+  --body-background: #141d2f;
+  --search-button: #0079ff;
+  --primary-text: #fff;
+  --button-text: #fff;
+  --secondary-text: #fff;
+  --app-name-text: #fff;
+  --component-background: #1e2a47;
+  --unavailable-social: #697c9a;
+  --button-text: #fff;
+  --box-shadow: 0;
+  --color-text-error: #f74646;
+  --search-button-hover: #60abff;
+}
+
 $light-body-background: #f6f8ff;
 $search-button: #0079ff;
 $search-button-hover: #60abff;
@@ -9,3 +38,6 @@ $button-text: #fff;
 $app-name-text: #222731;
 $box-shadow: rgba(70, 96, 187, 0.2);
 $color-text-error: #f74646;
+$dark-body-background: #141d2f;
+$dark-primary-text: #ffffff;
+$dark-component-background: #1e2a47;

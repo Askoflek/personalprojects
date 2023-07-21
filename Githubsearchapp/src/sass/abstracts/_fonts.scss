@@ -10,7 +10,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  color: $app-name-text;
+  color: var(--app-name-text);
 }
 
 .follower-amount {
@@ -21,11 +21,11 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  color: $primary-text;
+  color: var(--primary-text);
 }
 
 .github-username {
-  color: $search-button;
+  color: var(--search-button);
   font-family:
     Space Mono,
     sans-serif;
@@ -36,7 +36,7 @@
 }
 
 .follower-category {
-  color: $secondary-text;
+  color: var(--secondary-text);
   font-family:
     Space Mono,
     sans-serif;
@@ -47,7 +47,7 @@
 }
 
 .primary-text {
-  color: $secondary-text;
+  color: var(--secondary-text);
   font-family:
     Space Mono,
     sans-serif;
@@ -58,7 +58,7 @@
 }
 
 .social-text {
-  color: $secondary-text;
+  color: var(--secondary-text);
   font-family:
     Space Mono,
     sans-serif;
@@ -69,11 +69,11 @@
 }
 
 .not-available {
-  color: $unavailable-social;
+  color: var(--unavailable-social);
 }
 
 .toggle-mode-text {
-  color: $unavailable-social;
+  color: var(--unavailable-social);
   font-family:
     Space Mono,
     sans-serif;
@@ -90,7 +90,7 @@
 }
 
 .search-button {
-  color: $button-text;
+  color: var(--button-text);
   font-family:
     Space Mono,
     sans-serif;

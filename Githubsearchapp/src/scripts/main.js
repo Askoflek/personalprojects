@@ -12,6 +12,9 @@ const location = document.getElementById("location");
 const website = document.getElementById("website");
 const twitter = document.getElementById("twitter");
 const company = document.getElementById("company");
+const errorMessage = document.getElementById("error");
+const userProfile = document.getElementById("user-profile");
+const toggleButton = document.getElementById("toggle-button");
 
 new githubDOM({
   userPhoto,
@@ -26,4 +29,6 @@ new githubDOM({
   website,
   twitter,
   company,
+  errorMessage,
+  userProfile,
 });

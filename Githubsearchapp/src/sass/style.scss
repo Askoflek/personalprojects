@@ -8,7 +8,7 @@ body {
   max-width: 780px;
   margin: auto;
   padding: 25px;
-  background-color: $light-body-background;
+  background-color: var(--body-background);
 }
 
 .header-wrapper {
@@ -18,15 +18,29 @@ body {
 
 .toggle-mode-wrapper {
   display: flex;
+  outline: none;
+  border: none;
+  background-color: var(--body-background);
+
   gap: 16px;
   &:hover {
     cursor: pointer;
+    .toggle-mode-text {
+      color: var(--primary-text);
+    }
+    .toggle-mode-image {
+      g {
+        path {
+          fill: var(--primary-text);
+        }
+      }
+    }
   }
 }
 
 form {
   width: 100%;
-  background-color: $component-background;
+  background-color: var(--component-background);
   border-radius: 15px;
   margin-top: 36px;
   margin-bottom: 16px;
@@ -42,11 +56,11 @@ form {
     flex-grow: 1;
   }
   input {
-    background-color: $component-background;
+    background-color: var(--component-background);
     flex-grow: 1;
     border: none;
-    caret-color: $search-button;
-    color: $app-name-text;
+    caret-color: var(--search-button);
+    color: var(--app-name-text);
   }
   input:focus {
     outline: none;
@@ -54,21 +68,33 @@ form {
   input:hover {
     cursor: pointer;
   }
+  input:-webkit-autofill,
+  :-webkit-autofill:first-line,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    transition: background-color 5000s ease-in-out 0s !important;
+  }
 }
 
 .primary-search-text::placeholder {
   color: $secondary-text;
 }
 
-.error {
-  color: $color-text-error;
+#error {
+  color: var(--color-text-error);
   flex-shrink: 0;
   font-weight: 700;
   display: none;
 }
 
 .search-button {
-  background-color: $search-button;
+  background-color: var(--search-button);
   border-radius: 10px;
   color: $button-text;
   border-color: transparent;
@@ -77,7 +103,7 @@ form {
   flex-shrink: 0;
   &:hover {
     cursor: pointer;
-    background-color: $search-button-hover;
+    background-color: var(--search-button-hover);
   }
 }
 
@@ -91,14 +117,14 @@ form {
 }
 
 .user-profile {
-  background-color: $component-background;
+  background-color: var(--component-background);
   width: 100%;
   padding: 48px;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 37px;
   border-radius: 15px;
-  box-shadow: 0px 16px 30px -10px $box-shadow;
+  box-shadow: 0px 16px 30px -10px var(--box-shadow);
 }
 
 .hero-wrapper {
@@ -134,7 +160,7 @@ form {
 }
 
 .full-name {
-  color: $primary-text;
+  color: var(--primary-text);
 }
 
 .date-joined {
@@ -145,7 +171,7 @@ form {
 
 .follower-wrapper {
   display: flex;
-  background-color: $light-body-background;
+  background-color: var(--body-background);
   border-radius: 10px;
   margin-left: 154px;
 }
@@ -168,8 +194,6 @@ form {
   grid-template-rows: 1fr 1fr;
   row-gap: 19px;
   column-gap: 40px;
-  li {
-  }
 
   .social-1 {
     order: 1;
@@ -200,7 +224,7 @@ form {
 }
 
 .not-available > g > path {
-  fill: $unavailable-social;
+  fill: var(--unavailable-social);
 }
 
 @media (max-width: 768px) {
@@ -301,5 +325,35 @@ form {
   .search-button {
     width: 84px;
     height: 46px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-background: #141d2f;
+    --search-button: #0079ff;
+    --primary-text: #fff;
+    --button-text: #fff;
+    --secondary-text: #fff;
+    --app-name-text: #fff;
+    --component-background: #1e2a47;
+    --unavailable-social: #697c9a;
+    --button-text: #fff;
+    --box-shadow: 0;
+    --color-text-error: #f74646;
+    --search-button-hover: #60abff;
+  }
+  .dark-mode {
+    --body-background: #f6f8ff;
+    --search-button: #0079ff;
+    --primary-text: #2b3442;
+    --secondary-text: #4b6a9b;
+    --component-background: #fefefe;
+    --unavailable-social: #697c9a;
+    --button-text: #fff;
+    --app-name-text: #222731;
+    --box-shadow: rgba(70, 96, 187, 0.2);
+    --color-text-error: #f74646;
+    --search-button-hover: #60abff;
   }
 }
