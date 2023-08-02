@@ -67,7 +67,7 @@ form {
 }
 
 .search-user {
-  box-shadow: 0px 16px 30px -10px $box-shadow;
+  box-shadow: 0px 16px 30px -10px var(--box-shadow);
   display: flex;
   align-items: center;
   gap: 24px;
@@ -104,7 +104,7 @@ form {
 }
 
 .primary-search-text::placeholder {
-  color: $secondary-text;
+  color: var(--secondary-text);
 }
 
 #error {
@@ -117,7 +117,7 @@ form {
 .search-button {
   background-color: var(--search-button);
   border-radius: 10px;
-  color: $button-text;
+  color: var(--button-text);
   border-color: transparent;
   min-width: 106px;
   height: 50px;

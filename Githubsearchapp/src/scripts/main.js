@@ -14,8 +14,9 @@ const twitter = document.getElementById("twitter");
 const company = document.getElementById("company");
 const errorMessage = document.getElementById("error");
 const userProfile = document.getElementById("user-profile");
-const lightButton = document.getElementById("light-button");
-const darkButton = document.getElementById("dark-button");
+const lightToggle = document.getElementById("light-button");
+const darkToggle = document.getElementById("dark-button");
+const form = document.getElementById("form");
 
 new githubDOM({
   userPhoto,
@@ -32,6 +33,7 @@ new githubDOM({
   company,
   errorMessage,
   userProfile,
-  lightButton,
-  darkButton,
+  lightToggle,
+  darkToggle,
+  form,
 });

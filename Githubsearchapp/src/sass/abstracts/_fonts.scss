@@ -77,11 +77,11 @@
   font-family:
     Space Mono,
     sans-serif;
-  font-size: pxToRem(13);
+  font-size: f.pxToRem(13);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: pxToRem(2.5);
+  letter-spacing: f.pxToRem(2.5);
   text-transform: uppercase;
 }
 .toggle-mode-text-light {
@@ -89,11 +89,11 @@
   font-family:
     Space Mono,
     sans-serif;
-  font-size: pxToRem(13);
+  font-size: f.pxToRem(13);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: pxToRem(2.5);
+  letter-spacing: f.pxToRem(2.5);
   text-transform: uppercase;
 }
 

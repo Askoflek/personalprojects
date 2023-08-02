@@ -1,29 +1,26 @@
-import { currentUser } from "./github.js";
+import { GetCurrentUser } from "./github.js";
 
 export class githubDOM {
   currentUser;
   elements;
   constructor(elements) {
     this.elements = elements;
-    this.currentUser = new currentUser();
-    const form = document.getElementById("form");
-    form.addEventListener("submit", this.handleSubmit.bind(this));
-    const darkToggle = document.getElementById("dark-button");
-    const lightToggle = document.getElementById("light-button");
-    darkToggle.addEventListener("click", this.enableDarkMode.bind(this));
-    lightToggle.addEventListener("click", this.disableDarkMode.bind(this));
+    this.currentUser = new GetCurrentUser();
+    this.elements.form.addEventListener("submit", this.handleSubmit.bind(this));
+    this.elements.darkToggle.addEventListener("click", this.enableDarkMode.bind(this));
+    this.elements.lightToggle.addEventListener("click", this.disableDarkMode.bind(this));
   }
   enableDarkMode() {
     document.body.classList.remove("light-mode");
     document.body.classList.add("dark-mode");
-    this.elements.darkButton.style.display = "none";
-    this.elements.lightButton.style.display = "flex";
+    this.elements.darkToggle.style.display = "none";
+    this.elements.lightToggle.style.display = "flex";
   }
   disableDarkMode() {
     document.body.classList.remove("dark-mode");
     document.body.classList.add("light-mode");
-    this.elements.darkButton.style.display = "flex";
-    this.elements.lightButton.style.display = "none";
+    this.elements.darkToggle.style.display = "flex";
+    this.elements.lightToggle.style.display = "none";
   }
 
   handleSubmit(e) {
