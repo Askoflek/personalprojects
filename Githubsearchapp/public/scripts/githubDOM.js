@@ -30,6 +30,8 @@ export class githubDOM {
   }
   async processInput(input) {
     try {
+      this.elements.userProfile.style.display = "none";
+      this.renderLoading();
       const data = await this.currentUser.getUser(input);
       this.hideError();
       this.renderData(data);
@@ -39,8 +41,11 @@ export class githubDOM {
     }
   }
 
+  renderLoading() {
+    this.elements.loadingText.style.display = "block";
+  }
+
   renderData(data) {
-    console.log(data);
     this.renderUserProfile();
     this.elements.userPhoto.src = data.avatar_url;
     this.elements.fullName.textContent = data.name;
@@ -54,7 +59,7 @@ export class githubDOM {
     this.renderBlog(data);
     this.renderTwitter(data);
     this.renderCompany(data);
-    console.log("success");
+    this.elements.loadingText.style.display = "none";
   }
 
   renderDate(date) {
@@ -65,7 +70,6 @@ export class githubDOM {
   }
 
   renderError() {
-    console.log("rendering error");
     this.elements.errorMessage.style.display = "block";
     this.elements.userProfile.style.display = "none";
   }

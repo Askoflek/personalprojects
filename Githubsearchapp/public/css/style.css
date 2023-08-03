@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 :root {
   --body-background: #f6f8ff;
   --search-button: #0079ff;
@@ -298,6 +297,10 @@ form {
   align-items: center;
   flex-shrink: 0;
   padding-right: 10px;
+}
+
+.loading {
+  display: none;
 }
 
 .user-profile {

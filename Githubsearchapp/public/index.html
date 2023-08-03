@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Github user search app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -80,8 +85,9 @@
     </header>
     <form id="form">
       <div class="search-user">
-        <img src="assets/search.svg" class="search-image" />
+        <img src="assets/search.svg" class="search-image" alt="" />
         <input
+          aria-label="type github username"
           id="user"
           type="text"
           placeholder="Search GitHub username…"
@@ -92,6 +98,7 @@
         <button class="search-button">Search</button>
       </div>
     </form>
+    <span class="loading heading-1" id="loading">Loading...</span>
 
     <div class="user-profile" id="user-profile">
       <div class="hero-wrapper">

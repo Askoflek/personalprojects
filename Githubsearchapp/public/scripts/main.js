@@ -17,7 +17,7 @@ const userProfile = document.getElementById("user-profile");
 const lightToggle = document.getElementById("light-button");
 const darkToggle = document.getElementById("dark-button");
 const form = document.getElementById("form");
-
+const loadingText = document.getElementById("loading");
 new githubDOM({
   userPhoto,
   fullName,
@@ -36,4 +36,5 @@ new githubDOM({
   lightToggle,
   darkToggle,
   form,
+  loadingText,
 });
