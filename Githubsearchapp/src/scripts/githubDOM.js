@@ -72,7 +72,7 @@ export class githubDOM {
   renderError() {
     this.elements.errorMessage.style.display = "block";
     this.elements.userProfile.style.display = "none";
-    this.elements.lodaingText.style.display = "none";
+    this.elements.loadingText.style.display = "none";
   }
 
   hideError() {
