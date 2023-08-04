@@ -36,6 +36,7 @@ export class githubDOM {
       this.hideError();
       this.renderData(data);
     } catch (error) {
+      this.elements.loadingText.style.display = "none";
       this.renderError();
       console.error(error);
     }
@@ -72,7 +73,6 @@ export class githubDOM {
   renderError() {
     this.elements.errorMessage.style.display = "block";
     this.elements.userProfile.style.display = "none";
-    this.elements.loadingText.style.display = "none";
   }
 
   hideError() {

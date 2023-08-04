@@ -36,6 +36,7 @@ export class githubDOM {
       this.hideError();
       this.renderData(data);
     } catch (error) {
+      this.elements.loadingText.style.display = "none";
       this.renderError();
       console.error(error);
     }
