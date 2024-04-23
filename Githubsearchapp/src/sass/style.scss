@@ -75,6 +75,7 @@ form {
   border-radius: 15px;
   .primary-search-text {
     flex-grow: 1;
+    cursor: text !important;
   }
   input {
     background-color: var(--component-background);
