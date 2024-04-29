@@ -1,0 +1,55 @@
+.display {
+  font-family: Rubik, sans-serif;
+  font-size: calc(144rem / 16);
+  font-style: normal;
+  font-weight: 500;
+  color: var(--dark-navy);
+}
+.heading-L-bold {
+  font-family: Rubik, sans-serif;
+  font-size: calc(64rem / 16);
+  font-style: bold;
+  font-weight: 700;
+  color: var(--dark-navy);
+}
+.heading-L-regular {
+  font-family: Rubik, sans-serif;
+  font-size: calc(64rem / 16);
+  font-style: bold;
+  font-weight: 400;
+  color: var(--dark-navy);
+}
+
+.heading-M {
+  font-family: Rubik, sans-serif;
+  font-size: calc(36rem / 16);
+  font-style: normal;
+  font-weight: 500;
+  color: var(--dark-navy);
+}
+
+.heading-S {
+  font-family: Rubik, sans-serif;
+  font-size: calc(28rem / 16);
+  font-style: normal;
+  font-weight: 400;
+  color: var(--dark-navy);
+}
+
+.body-M {
+  font-family: Rubik, sans-serif;
+  font-size: calc(12rem / 16);
+  font-style: normal;
+  font-weight: 500;
+  color: var(--dark-navy);
+  line-height: 150%;
+}
+
+.body-S {
+  font-family: Rubik, sans-serif;
+  font-size: calc(12rem / 16);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--dark-navy);
+  line-height: 150%;
+}
