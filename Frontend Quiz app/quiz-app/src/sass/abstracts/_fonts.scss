@@ -8,14 +8,12 @@
 .heading-L-bold {
   font-family: Rubik, sans-serif;
   font-size: calc(64rem / 16);
-  font-style: bold;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--dark-navy);
 }
 .heading-L-regular {
   font-family: Rubik, sans-serif;
   font-size: calc(64rem / 16);
-  font-style: bold;
   font-weight: 400;
   color: var(--dark-navy);
 }
@@ -47,7 +45,7 @@
 
 .body-S {
   font-family: Rubik, sans-serif;
-  font-size: calc(12rem / 16);
+  font-size: calc(20rem / 16);
   font-style: italic;
   font-weight: 400;
   color: var(--dark-navy);
